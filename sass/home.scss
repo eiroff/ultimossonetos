@@ -49,9 +49,7 @@ table {
 
 html, body {
   width: 100%;
-  height:100%;
   margin: 0;
-  overflow: hidden;
 }
 
 #bm {
@@ -69,10 +67,18 @@ html, body {
 	100%{background-position: -1000px 0;}
 }
 
+@keyframes showLineByLine {
+	100% {
+		opacity: 1;
+	}
+}
+
+.hidden {
+	display: none;
+}
 
 .container {
 	height: 100%;
-	overflow-y: scroll;
 	font-family: "Spectral";
 	background-color: #230544;
 	background-image: url(../images/background2.png);
@@ -133,6 +139,34 @@ html, body {
 				font-size: 20px;
 				line-height: 25px;
 				margin: 200px 0;
+			}
+
+			.part {
+				height: 100vh;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				li {
+					opacity: 0;
+				}
+	
+				&.show li {
+					animation: showLineByLine 1.5s ease forwards;
+				}
+	
+				&.show li:nth-child(2) {
+					animation-delay: 0.7s;
+				}
+	
+				&.show li:nth-child(3) {
+					animation-delay: 1.4s;
+				}
+	
+				&.show li:nth-child(4) {
+					animation-delay: 2.1s;
+				}
 			}
 		}
 	}
@@ -228,7 +262,8 @@ html, body {
 	}
 
 	.ignore,
-	.back-home {
+	.back-home,
+	.start-reading {
 		font-size: 12px;
 	}
 }
@@ -254,6 +289,7 @@ html, body {
 	background-image: url(../images/background31.png);
 	animation: lineshorizontal 20s linear infinite;
 	background-size: cover;
+	height: 100vh;
 }
 
 .home {
