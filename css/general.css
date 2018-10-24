@@ -66,9 +66,6 @@ html, body {
 @keyframes showLineByLine {
   100% {
     opacity: 1; } }
-.hidden {
-  display: none; }
-
 .container {
   height: 100%;
   font-family: "Spectral";
@@ -97,7 +94,8 @@ html, body {
     color: #ffffff;
     width: 540px;
     height: 540px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    margin-top: 70px; }
   .container.poetry {
     background-color: #005366;
     background-image: none; }
@@ -128,8 +126,13 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: center; }
-        .container.poetry .poem .part li {
-          opacity: 0; }
+        .container.poetry .poem .part ul {
+          opacity: 0;
+          font-family: "Spectral";
+          font-size: 20px;
+          line-height: 25px;
+          margin: 200px 0;
+          color: #ffffff; }
         .container.poetry .poem .part.show li {
           animation: showLineByLine 1.5s ease forwards; }
         .container.poetry .poem .part.show li:nth-child(2) {
@@ -199,6 +202,17 @@ html, body {
   .container .back-home,
   .container .start-reading {
     font-size: 12px; }
+  .container .start-reading {
+    background: url(../images/button.png) center no-repeat;
+    height: 48px;
+    width: 174px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none; }
+  .container .hidden {
+    display: none; }
 
 .sound {
   background: url(../images/sound.png) no-repeat;

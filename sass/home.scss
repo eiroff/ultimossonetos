@@ -73,10 +73,6 @@ html, body {
 	}
 }
 
-.hidden {
-	display: none;
-}
-
 .container {
 	height: 100%;
 	font-family: "Spectral";
@@ -108,6 +104,7 @@ html, body {
 		width: 540px;
 		height: 540px;
 		border-radius: 50%;
+		margin-top: 70px;
 	}
 
 	&.poetry {
@@ -148,8 +145,13 @@ html, body {
 				align-items: center;
 				justify-content: center;
 
-				li {
+				ul {
 					opacity: 0;
+					font-family: "Spectral";
+					font-size: 20px;
+					line-height: 25px;
+					margin: 200px 0;
+					color: #ffffff;
 				}
 	
 				&.show li {
@@ -265,6 +267,21 @@ html, body {
 	.back-home,
 	.start-reading {
 		font-size: 12px;
+	}
+
+	.start-reading {
+		background: url(../images/button.png) center no-repeat;
+		height: 48px;
+		width: 174px;
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    text-transform: uppercase;
+	    text-decoration: none
+	}
+
+	.hidden {
+		display: none;
 	}
 }
 
