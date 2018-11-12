@@ -80,6 +80,9 @@ html, body {
 	background-image: url(../images/background2.png);
 	background-size: cover;
 	animation: lines 10s linear infinite;
+	iframe {
+		display: none;
+	}
 	p,
 	label,
 	input,
