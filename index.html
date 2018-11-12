@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  
   <meta charset="UTF-8" />
   <title>Últimos Sonetos</title>
   <link rel="stylesheet" href="css/general.css">
   <link href="https://fonts.googleapis.com/css?family=Spectral:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-      <a href="#" class="sound"></a>
-      <section class="home">
-        <article class="intro"  id="intro">
-          <img src="images/gradiente.png" alt="Cruz e Sousa">
-          <h1>Últimos Sonetos</h1>
-          <h2>redescubra Cruz e Sousa</h2>
-          <p>Mergulhe na linguagem enigmática da obra Últimos Sonetos de Cruz e Sousa  e conheça um dos mestres do simbolismo no Brasil</p>
-          <small>*Use fones de ouvido para uma melhor experiência</small>
-          <a href="#guestbook" class="next bottom scroll"></a>
-        </article>
-      </section>
+  <div class="container">
+    <iframe src="audio/satie-n1.mp3" allow="autoplay" id="iframe-satie-n1"></iframe>
 
-      <section class="guestbook" id="guestbook">
-        <article class="intro"  id="intro">
-          <a href="#intro" class="next top scroll"></a>
-          <form action="" autocomplete="off">
-            <label for="name">Antes de iniciar a leitura, deixe seu nome registrado na timeline de leitores da obra de Cruz e Sousa 
-              <div class="btn btn-primary tooltip">
-                <div class="right">
-                    <p>A timeline  funciona como um livro de visitas do site, é uma forma de deixar sua marca registrada junto aos outros leitores de Cruz e Sousa!</p>
-                    <i></i>
-                </div>
+    <a class="sound"></a>
+    <section class="home">
+      <article class="intro" id="intro">
+        <img src="images/gradiente.png" alt="Cruz e Sousa">
+        <h1>Últimos Sonetos</h1>
+        <h2>redescubra Cruz e Sousa</h2>
+        <p>Mergulhe na linguagem enigmática da obra Últimos Sonetos de Cruz e Sousa e conheça um dos mestres do
+          simbolismo no Brasil</p>
+        <small>*Use fones de ouvido para uma melhor experiência</small>
+        <a href="#guestbook" class="next bottom scroll"></a>
+      </article>
+    </section>
+
+    <section class="guestbook" id="guestbook">
+      <article class="intro" id="intro">
+        <a href="#intro" class="next top scroll"></a>
+        <form action="" autocomplete="off">
+          <label for="name">Antes de iniciar a leitura, deixe seu nome registrado na timeline de leitores da obra de
+            Cruz e Sousa
+            <div class="btn btn-primary tooltip">
+              <div class="right">
+                <p>A timeline funciona como um livro de visitas do site, é uma forma de deixar sua marca registrada
+                  junto aos outros leitores de Cruz e Sousa!</p>
+                <i></i>
               </div>
-            </label>
+            </div>
+          </label>
 
-            <input type="text" id="name" name="name"
-               minlength="3"/>
-          </form>
-          <a href="chapter1.html" class="ignore">pular esta etapa</a>
-          <a href="chapter1.html" class="start-reading hidden">iniciar leitura</a>
-        </article>
-      </section>
-    </div>
+          <input type="text" id="name" name="name" minlength="3" />
+        </form>
+        <a href="chapter1.html" class="ignore">pular esta etapa</a>
+        <a href="chapter1.html" class="start-reading hidden">iniciar leitura</a>
+      </article>
+    </section>
+  </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/main.js"></script>
-</body> 
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

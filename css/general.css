@@ -20,221 +20,280 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+  content: "";
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 html, body {
   width: 100%;
-  margin: 0; }
+  margin: 0;
+}
 
 #bm {
   width: 100%;
-  height: 300px; }
+  height: 300px;
+}
 
 @keyframes lines {
   0% {
-    background-position: 0 0; }
+    background-position: 0 0;
+  }
   100% {
-    background-position: 0 -1000px; } }
+    background-position: 0 -1000px;
+  }
+}
 @keyframes lineshorizontal {
   0% {
-    background-position: 0 0; }
+    background-position: 0 0;
+  }
   100% {
-    background-position: -1000px 0; } }
+    background-position: -1000px 0;
+  }
+}
 @keyframes showLineByLine {
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 .container {
   height: 100%;
   font-family: "Spectral";
   background-color: #230544;
   background-image: url(../images/background2.png);
   background-size: cover;
-  animation: lines 10s linear infinite; }
-  .container p,
-  .container label,
-  .container input,
-  .container a {
-    font-size: 15px;
-    margin-top: 35px;
-    line-height: 20px;
-    padding: 0 20px;
-    color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300; }
-  .container .intro {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 0 50px;
-    color: #ffffff;
-    width: 540px;
-    height: 540px;
-    border-radius: 50%;
-    margin-top: 70px; }
-  .container.poetry {
-    background-color: #015568;
-    background-image: none; }
-    .container.poetry .intro {
-      width: 740px; }
-      .container.poetry .intro a {
-        margin-top: 105px; }
-    .container.poetry h1 {
-      font-size: 75px;
-      font-weight: 700; }
-    .container.poetry h2 {
-      font-size: 40px;
-      font-weight: 600;
-      margin-top: 40px; }
-    .container.poetry .poem {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .container.poetry .poem p {
-        font-family: "Spectral";
-        font-size: 20px;
-        line-height: 25px;
-        margin: 200px 0; }
-      .container.poetry .poem .part {
-        height: 150vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .container.poetry .poem .part img {
-          max-width: 100%; }
-        .container.poetry .poem .part.part1 img:last-child {
-          -moz-transform: scaleX(-1);
-          -o-transform: scaleX(-1);
-          -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-          filter: FlipH;
-          -ms-filter: "FlipH"; }
-        .container.poetry .poem .part.part3 img:first-child {
-          -moz-transform: scaleX(-1);
-          -o-transform: scaleX(-1);
-          -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-          filter: FlipH;
-          -ms-filter: "FlipH"; }
-        .container.poetry .poem .part.part2 {
-          flex-direction: column; }
-          .container.poetry .poem .part.part2 img:last-child {
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-            -webkit-transform: scale(-1, -1);
-            transform: scale(-1, -1);
-            filter: FlipV;
-            -ms-filter: "FlipV"; }
-        .container.poetry .poem .part li {
-          opacity: 0;
-          font-family: "Spectral";
-          font-size: 20px;
-          line-height: 25px;
-          color: #ffffff; }
-        .container.poetry .poem .part.show li {
-          animation: showLineByLine 1.5s ease forwards; }
-        .container.poetry .poem .part.show li:nth-child(2) {
-          animation-delay: 0.7s; }
-        .container.poetry .poem .part.show li:nth-child(3) {
-          animation-delay: 1.4s; }
-        .container.poetry .poem .part.show li:nth-child(4) {
-          animation-delay: 2.1s; }
-  .container.chapter1 .horizontal-menu span {
-    position: absolute;
-    top: -4px; }
-    .container.chapter1 .horizontal-menu span:before {
-      content: "";
-      background: url(../images/arrow-menu.png);
-      width: 23px;
-      height: 29px;
-      position: relative;
-      display: block; }
-  .container.chapter2 {
-    background-color: #001e4f; }
-    .container.chapter2 .chapter {
-      background-color: #001e4f; }
-    .container.chapter2 .poems-nav {
-      display: flex; }
-  .container.chapter3 {
-    background-color: #26073d; }
-    .container.chapter3 .chapter {
-      background-color: #26073d; }
-  .container nav {
-    width: 73%;
-    margin: 0 auto; }
-  .container .horizontal-menu {
-    background: url(../images/bg-menu.png) no-repeat center;
-    display: flex;
-    justify-content: space-between;
-    margin: 70px auto;
-    position: relative; }
-    .container .horizontal-menu li {
-      display: inline-block; }
-      .container .horizontal-menu li a {
-        text-decoration: none;
-        opacity: 0;
-        font-size: 12px;
-        position: relative;
-        top: -30px;
-        padding: 20px 0; }
-    .container .horizontal-menu:hover li a {
-      opacity: 1; }
-  .container form {
-    display: flex;
-    flex-direction: column; }
-  .container label {
-    padding: 0 40px;
-    margin: 35px 0; }
-  .container input[type="text"] {
-    background-color: transparent;
-    border: none;
-    width: 380px;
-    background: url(../images/bg-form.png) no-repeat;
-    background-position: bottom;
-    margin: 0 auto;
-    font-style: italic;
-    text-align: center; }
-    .container input[type="text"]:focus {
-      outline: 0; }
-  .container .ignore,
-  .container .back-home,
-  .container .start-reading {
-    font-size: 12px; }
-  .container .start-reading {
-    background: url(../images/button.png) center no-repeat;
-    height: 48px;
-    width: 174px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    text-decoration: none; }
+  animation: lines 10s linear infinite;
+}
+.container iframe {
+  display: none;
+}
+.container p,
+.container label,
+.container input,
+.container a {
+  font-size: 15px;
+  margin-top: 35px;
+  line-height: 20px;
+  padding: 0 20px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.container .intro {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 50px;
+  color: #ffffff;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  margin-top: 70px;
+}
+.container.poetry {
+  background-color: #015568;
+  background-image: none;
+}
+.container.poetry .intro {
+  width: 740px;
+}
+.container.poetry .intro a {
+  margin-top: 105px;
+}
+.container.poetry h1 {
+  font-size: 75px;
+  font-weight: 700;
+}
+.container.poetry h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+.container.poetry .poem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container.poetry .poem p {
+  font-family: "Spectral";
+  font-size: 20px;
+  line-height: 25px;
+  margin: 200px 0;
+}
+.container.poetry .poem .part {
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container.poetry .poem .part img {
+  max-width: 100%;
+}
+.container.poetry .poem .part.part1 img:last-child {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.container.poetry .poem .part.part3 img:first-child {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.container.poetry .poem .part.part2 {
+  flex-direction: column;
+}
+.container.poetry .poem .part.part2 img:last-child {
+  -moz-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+.container.poetry .poem .part li {
+  opacity: 0;
+  font-family: "Spectral";
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.container.poetry .poem .part.show li {
+  animation: showLineByLine 1.5s ease forwards;
+}
+.container.poetry .poem .part.show li:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.container.poetry .poem .part.show li:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.container.poetry .poem .part.show li:nth-child(4) {
+  animation-delay: 2.1s;
+}
+.container.chapter1 .horizontal-menu span {
+  position: absolute;
+  top: -4px;
+}
+.container.chapter1 .horizontal-menu span:before {
+  content: "";
+  background: url(../images/arrow-menu.png);
+  width: 23px;
+  height: 29px;
+  position: relative;
+  display: block;
+}
+.container.chapter2 {
+  background-color: #001e4f;
+}
+.container.chapter2 .chapter {
+  background-color: #001e4f;
+}
+.container.chapter2 .poems-nav {
+  display: flex;
+}
+.container.chapter3 {
+  background-color: #26073d;
+}
+.container.chapter3 .chapter {
+  background-color: #26073d;
+}
+.container nav {
+  width: 73%;
+  margin: 0 auto;
+}
+.container .horizontal-menu {
+  background: url(../images/bg-menu.png) no-repeat center;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px auto;
+  position: relative;
+}
+.container .horizontal-menu li {
+  display: inline-block;
+}
+.container .horizontal-menu li a {
+  text-decoration: none;
+  opacity: 0;
+  font-size: 12px;
+  position: relative;
+  top: -30px;
+  padding: 20px 0;
+}
+.container .horizontal-menu:hover li a {
+  opacity: 1;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+.container label {
+  padding: 0 40px;
+  margin: 35px 0;
+}
+.container input[type=text] {
+  background-color: transparent;
+  border: none;
+  width: 380px;
+  background: url(../images/bg-form.png) no-repeat;
+  background-position: bottom;
+  margin: 0 auto;
+  font-style: italic;
+  text-align: center;
+}
+.container input[type=text]:focus {
+  outline: 0;
+}
+.container .ignore,
+.container .back-home,
+.container .start-reading {
+  font-size: 12px;
+}
+.container .start-reading {
+  background: url(../images/button.png) center no-repeat;
+  height: 48px;
+  width: 174px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 .sound {
   background: url(../images/sound.png) no-repeat;
@@ -243,7 +302,8 @@ html, body {
   position: absolute;
   top: 60px;
   left: 90%;
-  background-size: contain; }
+  background-size: contain;
+}
 
 .chapter {
   display: flex;
@@ -256,7 +316,8 @@ html, body {
   background-image: url(../images/background31.png);
   animation: lineshorizontal 20s linear infinite;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+}
 
 .home {
   background: url(../images/bg-logo.png) no-repeat;
@@ -267,27 +328,34 @@ html, body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100%; }
-  .home h1 {
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: 600; }
-  .home a {
-    text-decoration: none;
-    color: #ffffff; }
-  .home h2,
-  .home p,
-  .home small,
-  .home label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300; }
-  .home h2 {
-    font-size: 18px; }
-  .home small {
-    font-size: 9px;
-    margin: 15px 0 35px; }
-  .home img {
-    margin-bottom: 20px; }
+  height: 100%;
+}
+.home h1 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 600;
+}
+.home a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.home h2,
+.home p,
+.home small,
+.home label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.home h2 {
+  font-size: 18px;
+}
+.home small {
+  font-size: 9px;
+  margin: 15px 0 35px;
+}
+.home img {
+  margin-bottom: 20px;
+}
 
 .guestbook {
   background: url(../images/bg-logo.png) no-repeat;
@@ -298,23 +366,28 @@ html, body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 1000px; }
+  height: 1000px;
+}
 
 .next {
   background: url(../images/nav-btn.png) no-repeat;
   background-position: center;
   height: 50px;
   width: 50px;
-  display: block; }
+  display: block;
+}
 
 .next.top {
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+}
 
 .next.left {
-  transform: rotate(270deg); }
+  transform: rotate(270deg);
+}
 
 .next.right {
-  transform: rotate(90deg); }
+  transform: rotate(90deg);
+}
 
 .tooltip {
   display: inline-block;
@@ -325,7 +398,8 @@ html, body {
   position: relative;
   top: 5px;
   left: 5px;
-  background-size: contain; }
+  background-size: contain;
+}
 
 .tooltip .right {
   min-width: 300px;
@@ -344,15 +418,18 @@ html, body {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.8s; }
-  .tooltip .right p {
-    font-size: 11px;
-    line-height: 16px;
-    margin: 0; }
+  transition: opacity 0.8s;
+}
+.tooltip .right p {
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0;
+}
 
 .tooltip:hover .right {
   visibility: visible;
-  opacity: 1; }
+  opacity: 1;
+}
 
 .tooltip .right i {
   position: absolute;
@@ -361,10 +438,11 @@ html, body {
   margin-top: -12px;
   width: 12px;
   height: 24px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .tooltip .right i::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 12px;
   height: 12px;
@@ -372,28 +450,37 @@ html, body {
   top: 50%;
   transform: translate(50%, -50%) rotate(-45deg);
   background-color: #130b28;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
 
 .main-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 70px; }
-  .main-menu a:not(.back-home) {
-    width: 47px;
-    height: 47px;
-    display: inline-block;
-    margin: 0;
-    padding: 0 8px; }
-  .main-menu .fb {
-    background: url(../images/fb.png) no-repeat center;
-    background-size: contain; }
-  .main-menu .tw {
-    background: url(../images/tw.png) no-repeat center;
-    background-size: contain; }
-  .main-menu .wpp {
-    background: url(../images/wpp.png) no-repeat center;
-    background-size: contain; }
+  margin: 0 0 70px;
+}
+.main-menu a:not(.back-home) {
+  width: 47px;
+  height: 47px;
+  display: inline-block;
+  margin: 0;
+  padding: 0 8px;
+}
+.main-menu .fb {
+  background: url(../images/fb.png) no-repeat center;
+  background-size: contain;
+}
+.main-menu .tw {
+  background: url(../images/tw.png) no-repeat center;
+  background-size: contain;
+}
+.main-menu .wpp {
+  background: url(../images/wpp.png) no-repeat center;
+  background-size: contain;
+}
 
 .container .hidden {
-  display: none; }
+  display: none;
+}
+
+/*# sourceMappingURL=general.css.map */

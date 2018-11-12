@@ -1,18 +1,21 @@
 $(function() {
   var $ignoreButton = $('.ignore'),
-      $startReadingButton = $('.start-reading');
+      $startReadingButton = $('.start-reading'),
+      $satieN1Iframe = $('#iframe-satie-n1'),
+      $satieN3Iframe = $('#iframe-satie-n3');
 
-  // Smooth scrolling on anchor links (JOAO QUERY)
-  /*
-  $(".scroll").click(function(e){     
-    e.preventDefault();
-    $('html, body, .container').animate({
-      scrollTop: $(this.hash).offset().top
-    }, 500);
-  });
-  */
+  if ($satieN1Iframe.length > 0) {
+    $satieN1Iframe.on('load', function() {
+      $satieN1Iframe.contents().find('video').get(0).loop = true;
+    });
+  }
 
-  // Smooth scrolling on anchor links (NATIVE HIGH TECH)
+  if ($satieN3Iframe.length > 0) {
+    $satieN3Iframe.on('load', function() {
+      $satieN3Iframe.contents().find('video').get(0).loop = true;
+    });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -21,6 +24,18 @@ $(function() {
         behavior: 'smooth'
       });
     });
+  });
+
+  $('.sound').on('click', function(e) {
+    e.preventDefault();
+
+    if ($satieN1Iframe.length) {
+      $satieN1Iframe.contents().find('video').get(0).paused ? $satieN1Iframe.contents().find('video').get(0).play() : $satieN1Iframe.contents().find('video').get(0).pause();
+    }
+    
+    if ($satieN3Iframe.length) {
+      $satieN3Iframe.contents().find('video').get(0).paused ? $satieN3Iframe.contents().find('video').get(0).play() : $satieN3Iframe.contents().find('video').get(0).pause();
+    }
   });
 
   $('#name').on('keyup', function() {
@@ -47,6 +62,4 @@ $(function() {
       }
     });
   });
-
-
 });
