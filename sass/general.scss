@@ -153,6 +153,7 @@ html, body {
 				}
 
 				&.part1 {
+					margin-top: 100px;
 					img:last-child {
 						-moz-transform: scaleX(-1);
 				        -o-transform: scaleX(-1);
@@ -213,21 +214,6 @@ html, body {
 			}
 		}
 	}
-	
-	&.chapter1 {
-		.horizontal-menu span {
-			position: absolute;
-    		top: -4px;
-			&:before {
-				content: "";
-			    background: url(../images/arrow-menu.png);
-			    width: 23px;
-			    height: 29px;
-			    position: relative;
-			    display: block;
-			}
-		}
-	}
 
 	&.chapter2 {
 		background-color: #001e4f;
@@ -252,30 +238,111 @@ html, body {
 	}
 
 	.horizontal-menu {
-		background: url(../images/bg-menu.png) no-repeat center;
+		border-bottom: 1px solid #99c0c6;
 		display: flex;
     	justify-content: space-between;
     	margin: 70px auto;
     	position: relative;
 		li {
 			display: inline-block;
+			margin: 0 -70px;
 			a {
 				text-decoration: none;
 				opacity: 0;
 				font-size: 12px;
 				position: relative;
-    			top: -30px;
-    			padding: 20px 0;
+    			padding: 50px 0;
+			}
+			&:after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: #99c0c6;
+				display: block;
+				border-radius: 50%;
+				position: absolute;
+				top: 47px;
+				left: 0;
+			}
+			&:first-child {
+				&.active {
+					&:before {
+						left: 70px;
+					}
+				}
+			}
+			&:nth-child(2) {
+				&:after {
+					left: 20%;
+				}
+			}
+			&:nth-child(3) {
+				&:after {
+					left: 40%;
+				}
+				&.active {
+					&:before {
+						left: 74px;
+						background-color: #001e4f;
+					}
+				}
+			}
+			&:nth-child(4) {
+				&:after {
+					left: 60%;
+				}
+			}
+			&:nth-child(5) {
+				&:after {
+					left: 80%;
+				}
+			}
+			&:nth-child(6) {
+				&:after {
+					left: 100%;
+				}
+				&.active {
+					&:before {
+						left: 66px;
+						background-color: #26073d;
+					}
+				}
 			}
 		}
-		span {
+		.active {
+			a {
+				opacity: 1;
+				top: -30px;
+			}
 
+			&:after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: #99c0c6;
+				display: block;
+				border-radius: 50%;
+				position: absolute;
+				top: 46px;
+				left: 11px;
+			}
+
+			&:before {
+				content: "";
+				width: 30px;
+				height: 30px;
+				border: 1px solid #99c0c6;
+				background-color: #015568;
+				border-radius: 50%;
+				display: block;
+				top: 35px;
+				position: relative;
+			}
 		}
+
 		&:hover {
-			li {
-				a {
-					opacity: 1;
-				}
+			a {
+				opacity: 1;
 			}
 		}
 	}
@@ -482,7 +549,7 @@ html, body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 0 0 70px;
+	padding: 0 0 70px;
 	a:not(.back-home) {
 		width: 47px;
 		height: 47px;
