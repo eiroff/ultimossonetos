@@ -113,20 +113,37 @@ html, body {
 	&.poetry {
 		background-color: #015568;
 		background-image: none;
+		color: #f2dcf7;
 		.intro {
 			width: 740px;
 			a {
 				margin-top: 105px;
 			}
 		}
+		span {
+			font-size: 120px;
+			color: #99c0c6;
+			opacity: 0.5;
+			font-weight: bold;
+			position: relative;
+			top: 55px;
+		}
+		h1,
+		h2 {
+			color: #f2dcf7;
+		}
 		h1 {
 			font-size: 75px;
     		font-weight: 700;
+    		z-index: 1;
 		}
 		h2 {
-			font-size: 40px;
-		    font-weight: 600;
+			font-size: 25px;
+			letter-spacing: 1.2px;
+		    font-weight: normal;
 		    margin-top: 40px;
+		    font-family: "Roboto";
+		    text-transform: uppercase;
 		}
 
 		.poem {
@@ -192,24 +209,24 @@ html, body {
 					opacity: 0;
 					font-family: "Spectral";
 					font-size: 20px;
-					line-height: 25px;
-					color: #ffffff;
+					line-height: 27px;
+					color: #f2dcf7;
 				}
 	
 				&.show li {
-					animation: showLineByLine 1.5s ease forwards;
+					animation: showLineByLine 2.5s ease forwards;
 				}
 	
 				&.show li:nth-child(2) {
-					animation-delay: 0.7s;
+					animation-delay: 2.5s;
 				}
 	
 				&.show li:nth-child(3) {
-					animation-delay: 1.4s;
+					animation-delay: 4.8s;
 				}
 	
 				&.show li:nth-child(4) {
-					animation-delay: 2.1s;
+					animation-delay: 6.5s;
 				}
 			}
 		}
@@ -393,10 +410,19 @@ html, body {
 	background: url(../images/sound.png) no-repeat;
 	width: 30px;
 	height: 30px;
-	position: absolute;
+	position: fixed;
 	top: 60px;
 	left: 90%;
 	background-size: contain;
+	opacity: 0.8;
+	padding: 0;
+}
+
+.sound {
+	&.pause {
+		background: url(../images/no-sound.png) no-repeat;
+		background-size: contain;
+	}
 }
 
 .chapter {
