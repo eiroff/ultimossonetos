@@ -72,7 +72,14 @@ html, body {
   background-color: #230544;
   background-image: url(../images/background2.png);
   background-size: cover;
-  animation: lines 10s linear infinite; }
+  animation: lines 10s linear infinite;
+  /*nav:first-of-type {
+  	position: fixed;
+  	bottom: -40px;
+  	left: 13%;
+  	margin: 0;
+  	padding: 0;
+  }*/ }
   .container iframe {
     display: none; }
   .container p,
@@ -446,8 +453,8 @@ html, body {
   align-items: center;
   padding: 0 0 70px; }
   .main-menu a:not(.back-home) {
-    width: 47px;
-    height: 47px;
+    width: 46px;
+    height: 48px;
     display: inline-block;
     margin: 0;
     padding: 0 8px; }

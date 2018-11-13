@@ -252,7 +252,15 @@ html, body {
 	nav {
     	width: 73%;
     	margin: 0 auto;
+    	//padding: 0 0 100px;
 	}
+	/*nav:first-of-type {
+		position: fixed;
+		bottom: -40px;
+		left: 13%;
+		margin: 0;
+		padding: 0;
+	}*/
 
 	.horizontal-menu {
 		border-bottom: 1px solid #99c0c6;
@@ -577,8 +585,8 @@ html, body {
 	align-items: center;
 	padding: 0 0 70px;
 	a:not(.back-home) {
-		width: 47px;
-		height: 47px;
+		width: 46px;
+		height: 48px;
 		display: inline-block;
 		margin: 0;
 		padding: 0 8px;
