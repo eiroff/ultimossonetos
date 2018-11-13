@@ -292,11 +292,11 @@ html, body {
   .container .ignore,
   .container .back-home,
   .container .start-reading {
-    font-size: 12px; }
+    font-size: 12px;
+    height: 48px;
+    width: 174px; }
   .container .start-reading {
     background: url(../images/button.png) center no-repeat;
-    height: 48px;
-    width: 174px;
     display: flex;
     align-items: center;
     justify-content: center;

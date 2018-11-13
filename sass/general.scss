@@ -400,12 +400,12 @@ html, body {
 	.back-home,
 	.start-reading {
 		font-size: 12px;
+		height: 48px;
+		width: 174px;
 	}
 
 	.start-reading {
 		background: url(../images/button.png) center no-repeat;
-		height: 48px;
-		width: 174px;
 		display: flex;
 	    align-items: center;
 	    justify-content: center;
