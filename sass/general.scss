@@ -615,6 +615,21 @@ html, body {
   color: #ffffff;
   font-family: Roboto, sans-serif;
 
+  .menu {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .menu a {
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 30px;
+  }
+
+  a {
+    color: #ffffff;
+  }
+
   .main-title,
   .year-info-number {
     font-family: Spectral, serif;
@@ -622,12 +637,30 @@ html, body {
     font-weight: bold;
   }
 
+  .main-title.part-2 {
+    margin-top: 15px;
+  }
+
   .years-info {
     display: flex;
+    position: relative;
+    top: 125px;
   }
 
   .bio-introduce {
     float: left;
+    padding: 50px;
+    margin-right: 500px;
+
+    .main-title.part-2,
+    p,
+    .menu {
+      margin-left: 95px;
+    }
+
+    img {
+      margin-left: 100px;
+    }
   }
 
   .year-info {
@@ -635,6 +668,10 @@ html, body {
     padding: 20px 120px;
     box-sizing: border-box;
     position: relative;
+
+    .flex-container {
+      display: flex;
+    }
 
     img {
       max-width: 100%;
@@ -654,10 +691,59 @@ html, body {
 
     .info-link {
       margin-top: 100px;
+
+      a {
+        font-weight: 500;
+        font-size: 15px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-right: 15px;
+      }
+
+      .ler-o-moleque {
+        background: url(../images/bg-ler-o-moleque.png);
+        width: 182px;
+        height: 48px;
+      }
+
+      .ler-tropos-e-fantasias {
+        background: url(../images/bg-ler-tropos-e-fantasias.png);
+        width: 247px;
+        height: 48px;
+      }
+
+      .ler-missais {
+        background: url(../images/bg-ler-missais.png);
+        width: 155px;
+        height: 48px;
+      }
+
+      .ler-broqueis {
+        background: url(../images/bg-ler-broqueis.png);
+        width: 167px;
+        height: 48px;
+      }
+
+      .ler-farois {
+        background: url(../images/bg-ler-farois.png);
+        width: 155px;
+        height: 48px;
+      }
+
+      .ler-ultimos-sonetos {
+        background: url(../images/bg-ler-ultimos-sonetos.png);
+        width: 238px;
+        height: 48px;
+      }
     }
   }
 
-  .year-info p {
+  p {
     font-weight: 300;
     font-size: 14px;
     line-height: 18px;
