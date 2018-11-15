@@ -32,7 +32,7 @@ $(function() {
     if ($satieN1Iframe.length) {
       $satieN1Iframe.contents().find('video').get(0).paused ? $satieN1Iframe.contents().find('video').get(0).play() : $satieN1Iframe.contents().find('video').get(0).pause();
     }
-    
+
     if ($satieN3Iframe.length) {
       $satieN3Iframe.contents().find('video').get(0).paused ? $satieN3Iframe.contents().find('video').get(0).play() : $satieN3Iframe.contents().find('video').get(0).pause();
     }
@@ -50,7 +50,7 @@ $(function() {
 
   $(document).on('scroll', function() {
     var actualScroll = $(this).scrollTop();
-    
+
     $('.poem .part').each(function() {
       var partPoemPositionTop = $(this).position().top,
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
