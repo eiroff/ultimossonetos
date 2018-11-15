@@ -602,7 +602,7 @@ html, body {
 .bio-body .bio-introduce {
   float: left;
   padding: 50px;
-  margin-right: 500px;
+  margin-right: 730px;
 }
 .bio-body .bio-introduce .main-title.part-2,
 .bio-body .bio-introduce p,
@@ -688,6 +688,14 @@ html, body {
   font-size: 17px;
   font-weight: 500;
   margin-bottom: 15px;
+}
+.bio-body .timeline {
+  background: url(../images/bg-timeline.png);
+  width: 5189px;
+  height: 31px;
+  position: absolute;
+  top: 390px;
+  left: -225px;
 }
 
 /*# sourceMappingURL=general.css.map */

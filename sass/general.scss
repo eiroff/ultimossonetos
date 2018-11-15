@@ -650,7 +650,7 @@ html, body {
   .bio-introduce {
     float: left;
     padding: 50px;
-    margin-right: 500px;
+    margin-right: 730px;
 
     .main-title.part-2,
     p,
@@ -753,5 +753,14 @@ html, body {
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 15px;
+  }
+
+  .timeline {
+    background: url(../images/bg-timeline.png);
+    width: 5189px;
+    height: 31px;
+    position: absolute;
+    top: 390px;
+    left: -225px;
   }
 }
