@@ -56,6 +56,24 @@ $(function() {
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
 
       if (actualScroll > partPoemPositionTop) {
+        if (!$(this).hasClass('show')) {
+          var videos = $(this).find('[data-video]');
+
+          videos.each(function() {
+            var times = parseInt($(this).attr('data-times'));
+            var i = parseInt($(this).attr('data-i'));
+
+            $(this).get(0).play();
+
+            $(this).get(0).addEventListener('ended', function() {
+              if (i < times) {
+                this.play();
+                i++;
+              }
+            });
+          });
+        }
+
         $(this).addClass('show');
       } else {
         $(this).removeClass('show');
