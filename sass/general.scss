@@ -116,9 +116,6 @@ html, body {
 		color: #f2dcf7;
 		.intro {
 			width: 740px;
-			a {
-				margin-top: 105px;
-			}
 		}
 		span {
 			font-size: 120px;
@@ -195,7 +192,7 @@ html, body {
 
 				&.part2 {
 					flex-direction: column;
-					img:last-child {
+					div:last-child {
 						-moz-transform: scale(-1, -1);
 				        -o-transform: scale(-1, -1);
 				        -webkit-transform: scale(-1, -1);
@@ -227,6 +224,20 @@ html, body {
 
 				&.show li:nth-child(4) {
 					animation-delay: 6.5s;
+				}
+			}
+		}
+	}
+
+	&.chapter1 {
+		.poem1 {
+			.part1 {
+				display: flex;
+    			justify-content: space-between;
+			}
+			.part2 {
+				div {
+					display: flex;
 				}
 			}
 		}
@@ -615,6 +626,10 @@ html, body {
   color: #ffffff;
   font-family: Roboto, sans-serif;
 
+  .sound {
+  	margin-top: -35px;
+  }
+
   .menu {
     display: flex;
     margin-top: 40px;
@@ -644,7 +659,7 @@ html, body {
   .years-info {
     display: flex;
     position: relative;
-    top: 94px;
+    top: 70px;
   }
 
   .bio-introduce {
@@ -665,17 +680,22 @@ html, body {
 
   .year-info {
     flex: 0 0 600px;
-    padding: 20px 120px;
+    padding: 20px 120px 60px 120px;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .flex-container {
       display: flex;
     }
 
     img {
-      max-width: 100%;
-      height: auto;
+	    max-width: 130%;
+	    left: -20%;
+	    height: auto;
+	    position: relative;
     }
 
     .year-info-number {
@@ -686,12 +706,12 @@ html, body {
     }
 
     .info-image {
-      margin-top: 70px;
+      margin-top: 90px;
     }
 
     .info-link {
-      margin-top: 100px;
-
+	    top: -75px;
+	    position: relative;
       a {
         font-weight: 500;
         font-size: 15px;

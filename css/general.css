@@ -111,8 +111,6 @@ html, body {
     color: #f2dcf7; }
     .container.poetry .intro {
       width: 740px; }
-      .container.poetry .intro a {
-        margin-top: 105px; }
     .container.poetry span {
       font-size: 120px;
       color: #99c0c6;
@@ -170,7 +168,7 @@ html, body {
           -ms-filter: "FlipH"; }
         .container.poetry .poem .part.part2 {
           flex-direction: column; }
-          .container.poetry .poem .part.part2 img:last-child {
+          .container.poetry .poem .part.part2 div:last-child {
             -moz-transform: scale(-1, -1);
             -o-transform: scale(-1, -1);
             -webkit-transform: scale(-1, -1);
@@ -191,6 +189,11 @@ html, body {
           animation-delay: 4.8s; }
         .container.poetry .poem .part.show li:nth-child(4) {
           animation-delay: 6.5s; }
+  .container.chapter1 .poem1 .part1 {
+    display: flex;
+    justify-content: space-between; }
+  .container.chapter1 .poem1 .part2 div {
+    display: flex; }
   .container.chapter2 {
     background-color: #001e4f; }
     .container.chapter2 .chapter {
@@ -475,6 +478,8 @@ html, body {
   background: #230544;
   color: #ffffff;
   font-family: Roboto, sans-serif; }
+  .bio-body .sound {
+    margin-top: -35px; }
   .bio-body .menu {
     display: flex;
     margin-top: 40px; }
@@ -494,7 +499,7 @@ html, body {
   .bio-body .years-info {
     display: flex;
     position: relative;
-    top: 94px; }
+    top: 70px; }
   .bio-body .bio-introduce {
     float: left;
     padding: 50px;
@@ -507,23 +512,29 @@ html, body {
       margin-left: 100px; }
   .bio-body .year-info {
     flex: 0 0 600px;
-    padding: 20px 120px;
+    padding: 20px 120px 60px 120px;
     box-sizing: border-box;
-    position: relative; }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
     .bio-body .year-info .flex-container {
       display: flex; }
     .bio-body .year-info img {
-      max-width: 100%;
-      height: auto; }
+      max-width: 130%;
+      left: -20%;
+      height: auto;
+      position: relative; }
     .bio-body .year-info .year-info-number {
       position: absolute;
       transform: rotate(270deg);
       top: 60px;
       left: 0; }
     .bio-body .year-info .info-image {
-      margin-top: 70px; }
+      margin-top: 90px; }
     .bio-body .year-info .info-link {
-      margin-top: 100px; }
+      top: -75px;
+      position: relative; }
       .bio-body .year-info .info-link a {
         font-weight: 500;
         font-size: 15px;
