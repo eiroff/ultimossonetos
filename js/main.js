@@ -1,4 +1,21 @@
 $(function() {
+
+    var gif1 = new SuperGif({ gif: $('.gif-1').get(0) } );
+    var gif2 = new SuperGif({ gif: $('.gif-2').get(0) } );
+
+    gif1.load(function() {
+      console.log('g1 loaded');
+    });
+
+    gif2.load(function() {
+      console.log('g2 loaded');
+    });
+
+    gif1.load();
+    gif2.load();
+
+
+
   var $ignoreButton = $('.ignore'),
       $startReadingButton = $('.start-reading'),
       $satieN1Iframe = $('#iframe-satie-n1'),
@@ -56,25 +73,29 @@ $(function() {
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
 
       if (actualScroll > partPoemPositionTop) {
-        if (!$(this).hasClass('show')) {
-          var videos = $(this).find('[data-video]');
-
-          videos.each(function() {
-            var times = parseInt($(this).attr('data-times'));
-            var i = parseInt($(this).attr('data-i'));
-
-            if (!$(this).get(0).isPaused) {
-              $(this).get(0).play();
-
-              $(this).get(0).addEventListener('ended', function() {
-                if (i < times - 1) {
-                  this.play();
-                  i++;
-                }
-              });
-            }
-          });
+        if (!gif1.get_loading() && !gif2.get_loading()) {
+          gif1.play();
+          gif2.play();
         }
+        // if (!$(this).hasClass('show')) {
+        //   var videos = $(this).find('[data-video]');
+
+        //   videos.each(function() {
+        //     var times = parseInt($(this).attr('data-times'));
+        //     var i = parseInt($(this).attr('data-i'));
+
+        //     if (!$(this).get(0).isPaused) {
+        //       $(this).get(0).play();
+
+        //       $(this).get(0).addEventListener('ended', function() {
+        //         if (i < times - 1) {
+        //           this.play();
+        //           i++;
+        //         }
+        //       });
+        //     }
+        //   });
+        // }
 
         $(this).addClass('show');
       } else {

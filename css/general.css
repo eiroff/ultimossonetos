@@ -699,7 +699,7 @@ html, body {
 }
 
 video {
-  filter: contrast(100%);
+  filter: contrast(90%);
 }
 
 /*# sourceMappingURL=general.css.map */
