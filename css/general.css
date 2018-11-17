@@ -66,6 +66,39 @@ html, body {
 @keyframes showLineByLine {
   100% {
     opacity: 1; } }
+.info-link a {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform; }
+  .info-link a:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity; }
+  .info-link a:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+    .info-link a:hover:before {
+      opacity: 1;
+      -webkit-transform: translateY(5px);
+      transform: translateY(5px); }
+
 .container {
   height: 100%;
   font-family: "Spectral";
@@ -199,11 +232,37 @@ html, body {
     .container.chapter2 .chapter {
       background-color: #001e4f; }
     .container.chapter2 .poems-nav {
-      display: flex; }
+      display: flex;
+      justify-content: center; }
+    .container.chapter2 .part1 {
+      display: flex;
+      flex-direction: column; }
+      .container.chapter2 .part1 div {
+        display: flex; }
   .container.chapter3 {
     background-color: #26073d; }
     .container.chapter3 .chapter {
       background-color: #26073d; }
+    .container.chapter3 .share-timeline {
+      text-align: center; }
+    .container.chapter3 .info-link {
+      display: flex;
+      justify-content: center; }
+      .container.chapter3 .info-link .bio,
+      .container.chapter3 .info-link .timeline {
+        background: url(../images/bg-ler-tropos-e-fantasias.png) no-repeat;
+        width: 247px;
+        height: 48px;
+        font-weight: 500;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        padding: 0; }
   .container nav {
     width: 73%;
     margin: 0 auto; }
@@ -587,14 +646,6 @@ html, body {
     left: -225px; }
 
 video {
-<<<<<<< HEAD
-<<<<<<< HEAD
   filter: contrast(90%); }
-=======
-=======
->>>>>>> 2b167381a45959da2824f29248ff91b45cb8d91e
-  filter: contrast(90%);
-}
->>>>>>> 2b167381a45959da2824f29248ff91b45cb8d91e
 
 /*# sourceMappingURL=general.css.map */
