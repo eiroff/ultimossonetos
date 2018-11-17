@@ -587,6 +587,11 @@ html, body {
     left: -225px; }
 
 video {
+<<<<<<< HEAD
   filter: contrast(90%); }
+=======
+  filter: contrast(90%);
+}
+>>>>>>> 2b167381a45959da2824f29248ff91b45cb8d91e
 
 /*# sourceMappingURL=general.css.map */
