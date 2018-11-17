@@ -573,23 +573,53 @@ html, body {
   color: #ffffff;
   font-family: Roboto, sans-serif;
 }
+.bio-body .menu {
+  display: flex;
+  margin-top: 40px;
+}
+.bio-body .menu a {
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 30px;
+}
+.bio-body a {
+  color: #ffffff;
+}
 .bio-body .main-title,
 .bio-body .year-info-number {
   font-family: Spectral, serif;
   font-size: 65px;
   font-weight: bold;
 }
+.bio-body .main-title.part-2 {
+  margin-top: 15px;
+}
 .bio-body .years-info {
   display: flex;
+  position: relative;
+  top: 125px;
 }
 .bio-body .bio-introduce {
   float: left;
+  padding: 50px;
+  margin-right: 730px;
+}
+.bio-body .bio-introduce .main-title.part-2,
+.bio-body .bio-introduce p,
+.bio-body .bio-introduce .menu {
+  margin-left: 95px;
+}
+.bio-body .bio-introduce img {
+  margin-left: 100px;
 }
 .bio-body .year-info {
   flex: 0 0 600px;
   padding: 20px 120px;
   box-sizing: border-box;
   position: relative;
+}
+.bio-body .year-info .flex-container {
+  display: flex;
 }
 .bio-body .year-info img {
   max-width: 100%;
@@ -607,7 +637,49 @@ html, body {
 .bio-body .year-info .info-link {
   margin-top: 100px;
 }
-.bio-body .year-info p {
+.bio-body .year-info .info-link a {
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+.bio-body .year-info .info-link .ler-o-moleque {
+  background: url(../images/bg-ler-o-moleque.png);
+  width: 182px;
+  height: 48px;
+}
+.bio-body .year-info .info-link .ler-tropos-e-fantasias {
+  background: url(../images/bg-ler-tropos-e-fantasias.png);
+  width: 247px;
+  height: 48px;
+}
+.bio-body .year-info .info-link .ler-missais {
+  background: url(../images/bg-ler-missais.png);
+  width: 155px;
+  height: 48px;
+}
+.bio-body .year-info .info-link .ler-broqueis {
+  background: url(../images/bg-ler-broqueis.png);
+  width: 167px;
+  height: 48px;
+}
+.bio-body .year-info .info-link .ler-farois {
+  background: url(../images/bg-ler-farois.png);
+  width: 155px;
+  height: 48px;
+}
+.bio-body .year-info .info-link .ler-ultimos-sonetos {
+  background: url(../images/bg-ler-ultimos-sonetos.png);
+  width: 238px;
+  height: 48px;
+}
+.bio-body p {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
@@ -616,6 +688,14 @@ html, body {
   font-size: 17px;
   font-weight: 500;
   margin-bottom: 15px;
+}
+.bio-body .timeline {
+  background: url(../images/bg-timeline.png);
+  width: 5189px;
+  height: 31px;
+  position: absolute;
+  top: 390px;
+  left: -225px;
 }
 
 /*# sourceMappingURL=general.css.map */
