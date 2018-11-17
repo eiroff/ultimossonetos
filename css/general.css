@@ -698,4 +698,8 @@ html, body {
   left: -225px;
 }
 
+video {
+  filter: contrast(100%);
+}
+
 /*# sourceMappingURL=general.css.map */
