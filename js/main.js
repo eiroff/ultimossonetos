@@ -63,14 +63,16 @@ $(function() {
             var times = parseInt($(this).attr('data-times'));
             var i = parseInt($(this).attr('data-i'));
 
-            $(this).get(0).play();
+            if (!$(this).get(0).isPaused) {
+              $(this).get(0).play();
 
-            $(this).get(0).addEventListener('ended', function() {
-              if (i < times) {
-                this.play();
-                i++;
-              }
-            });
+              $(this).get(0).addEventListener('ended', function() {
+                if (i < times - 1) {
+                  this.play();
+                  i++;
+                }
+              });
+            }
           });
         }
 
