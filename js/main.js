@@ -1,18 +1,18 @@
 $(function() {
 
-    var gif1 = new SuperGif({ gif: $('.gif-1').get(0) } );
-    var gif2 = new SuperGif({ gif: $('.gif-2').get(0) } );
+    // var gif1 = new SuperGif({ gif: $('.gif-1').get(0) } );
+    // var gif2 = new SuperGif({ gif: $('.gif-2').get(0) } );
 
-    gif1.load(function() {
-      console.log('g1 loaded');
-    });
+    // gif1.load(function() {
+    //   console.log('g1 loaded');
+    // });
 
-    gif2.load(function() {
-      console.log('g2 loaded');
-    });
+    // gif2.load(function() {
+    //   console.log('g2 loaded');
+    // });
 
-    gif1.load();
-    gif2.load();
+    // gif1.load();
+    // gif2.load();
 
 
 
