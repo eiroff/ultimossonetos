@@ -22,7 +22,8 @@ $(function() {
 
   function verifyLoadedComplete() {
     if (totalGifsLoaded === totalGifs) {
-      $('.loading').hide();
+      $('.loading').addClass('hide-load');
+      $('.chapter-container').addClass('allow-scroll');
       for (var gif in gifs) {
         $(gifs[gif].get_canvas()).attr('data-name', gif);
       }
