@@ -31,8 +31,6 @@ $(function() {
     }
   }
 
-  console.log(gifs);
-
   var $ignoreButton = $('.ignore'),
       $startReadingButton = $('.start-reading'),
       $satieN1Iframe = $('#iframe-satie-n1'),
@@ -101,7 +99,7 @@ $(function() {
       var partPoemPositionTop = $(this).position().top,
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
 
-      if (actualScroll > partPoemPositionTop) {
+      if (actualScroll - ($(window).height() / 3) > partPoemPositionTop) {
         $(this).find('[data-name]').each(function() {
           var gifName = $(this).attr('data-name');
 
