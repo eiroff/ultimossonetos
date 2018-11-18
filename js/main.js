@@ -1,20 +1,37 @@
 $(function() {
+  var totalGifsLoaded = 0;
+  var gifs = {};
+  var totalGifs = $('.gif').length;
 
-    var gif1 = new SuperGif({ gif: $('.gif-1').get(0) } );
-    var gif2 = new SuperGif({ gif: $('.gif-2').get(0) } );
+  $('.gif').each(function() {
+    var gifName = $(this).attr('data-name');
+    gifs[gifName] = new SuperGif({
+      gif: $(this).get(0),
+      loop_mode: false
+    });
+  });
 
-    gif1.load(function() {
-      console.log('g1 loaded');
+  for (var gif in gifs) {
+    gifs[gif].load(function() {
+      totalGifsLoaded++;
+      verifyLoadedComplete();
     });
 
-    gif2.load(function() {
-      console.log('g2 loaded');
-    });
+    gifs[gif].load();
+  }
 
-    gif1.load();
-    gif2.load();
+  function verifyLoadedComplete() {
+    if (totalGifsLoaded === totalGifs) {
+      $('.loading').hide();
 
+      for (var gif in gifs) {
+        $(gifs[gif].get_canvas()).attr('data-name', gif);
+      }
 
+    }
+  }
+
+  console.log(gifs);
 
   var $ignoreButton = $('.ignore'),
       $startReadingButton = $('.start-reading'),
@@ -47,11 +64,23 @@ $(function() {
     e.preventDefault();
 
     if ($satieN1Iframe.length) {
-      $satieN1Iframe.contents().find('video').get(0).paused ? $satieN1Iframe.contents().find('video').get(0).play() : $satieN1Iframe.contents().find('video').get(0).pause();
+      if ($satieN1Iframe.contents().find('video').get(0).paused) {
+        $satieN1Iframe.contents().find('video').get(0).play()
+        $('.sound').removeClass('muted');
+      } else {
+        $satieN1Iframe.contents().find('video').get(0).pause();
+        $('.sound').addClass('muted');
+      }
     }
 
     if ($satieN3Iframe.length) {
-      $satieN3Iframe.contents().find('video').get(0).paused ? $satieN3Iframe.contents().find('video').get(0).play() : $satieN3Iframe.contents().find('video').get(0).pause();
+      if ($satieN3Iframe.contents().find('video').get(0).paused) {
+        $satieN3Iframe.contents().find('video').get(0).play();
+        $('.sound').removeClass('muted');
+      } else {
+        $satieN3Iframe.contents().find('video').get(0).pause();
+        $('.sound').addClass('muted');
+      }
     }
   });
 
@@ -73,29 +102,16 @@ $(function() {
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
 
       if (actualScroll > partPoemPositionTop) {
-        if (!gif1.get_loading() && !gif2.get_loading()) {
-          gif1.play();
-          gif2.play();
-        }
-        // if (!$(this).hasClass('show')) {
-        //   var videos = $(this).find('[data-video]');
+        $(this).find('[data-name]').each(function() {
+          var gifName = $(this).attr('data-name');
 
-        //   videos.each(function() {
-        //     var times = parseInt($(this).attr('data-times'));
-        //     var i = parseInt($(this).attr('data-i'));
+          for (var gif in gifs) {
+            if (gifName === gif) {
+              gifs[gif].play();
+            }
+          }
 
-        //     if (!$(this).get(0).isPaused) {
-        //       $(this).get(0).play();
-
-        //       $(this).get(0).addEventListener('ended', function() {
-        //         if (i < times - 1) {
-        //           this.play();
-        //           i++;
-        //         }
-        //       });
-        //     }
-        //   });
-        // }
+        });
 
         $(this).addClass('show');
       } else {
