@@ -96,10 +96,11 @@ $(function() {
     var actualScroll = $(this).scrollTop();
 
     $('.poem .part').each(function() {
-      var partPoemPositionTop = $(this).position().top,
+      var partPoemPositionTop = $(this).position().top + parseInt($(this).css('marginTop'), 10),
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
 
-      if (actualScroll - ($(window).height() / 3) > partPoemPositionTop) {
+      if (actualScroll > partPoemPositionTop) {
+        console.log(partPoemPositionTop);
         $(this).find('[data-name]').each(function() {
           var gifName = $(this).attr('data-name');
 
