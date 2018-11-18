@@ -8,10 +8,14 @@
   <link rel="stylesheet" href="css/general.css">
   <link href="https://fonts.googleapis.com/css?family=Spectral:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/libgif.js"></script>
+  <script type="text/javascript" src="js/rubbable.js"></script>
 </head>
 
-<body class="chapter-container">
-  <div class="loading overlay">
+<body>
+<!--   <div class="loading overlay">
     <div class="box intro">
       <img src="images/gradiente.png" alt="Cruz e Sousa">
       <h1>Carregando poema</h1>
@@ -22,7 +26,7 @@
       </div>
       </p>
     </div>
-  </div>
+  </div> -->
   <div class="container poetry chapter3">
     <iframe src="audio/satie-n4.mp3" allow="autoplay" id="iframe-satie-n3"></iframe>
 
@@ -32,7 +36,7 @@
         <span>03</span>
         <h1>O Etéreo</h1>
         <h2>Sorriso interior</h2>
-        <a href="#guestbook" class="next bottom"></a>
+        <a href="#poem3" class="next bottom"></a>
       </article>
     </section>
 
@@ -44,7 +48,7 @@
           <li>Leva consigo esse brasão augusto</li>
           <li>Do grande amor, da nobre fé tranquila.</li>
         </ul>
-        <img src="images/poem3-part1.gif">
+        <img class="gif" rel:auto_play="0" data-name="gif15" src="images/poem3-part1.gif">
       </div>
 
       <div class="part part2">
@@ -54,7 +58,7 @@
           <li>Fica sereno, num sorriso justo,</li>
           <li>Enquanto tudo em derredor oscila.</li>
         </ul>
-        <img src="images/poem3-part2.gif">
+        <img class="gif" rel:auto_play="0" data-name="gif16" src="images/poem3-part2.gif">
       </div>
 
       <div class="part part3">
@@ -71,7 +75,7 @@
           <li>E para ironizar as próprias dores</li>
           <li>Canta por entre as águas do Dilúvio!</li>
         </ul>
-        <img src="images/poem3-part3.gif">
+        <img class="gif" rel:auto_play="0" data-name="gif17" src="images/poem3-part3.gif">
       </div>
 
       <a href="chapter2.html" class="next right"></a>
@@ -126,9 +130,6 @@
       </ul>
     </nav>
   </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>
