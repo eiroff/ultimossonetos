@@ -185,29 +185,17 @@ html, body {
           max-width: 100%; }
         .container.poetry .poem .part.part1 {
           margin-top: 100px; }
-          .container.poetry .poem .part.part1 img:last-child {
+        .container.poetry .poem .part.part3 {
+          justify-content: space-between; }
+          .container.poetry .poem .part.part3 .jsgif:first-child {
             -moz-transform: scaleX(-1);
             -o-transform: scaleX(-1);
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
             filter: FlipH;
             -ms-filter: "FlipH"; }
-        .container.poetry .poem .part.part3 img:first-child {
-          -moz-transform: scaleX(-1);
-          -o-transform: scaleX(-1);
-          -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-          filter: FlipH;
-          -ms-filter: "FlipH"; }
-        .container.poetry .poem .part.part2 {
+        .container.poetry .poem .part.part4 {
           flex-direction: column; }
-          .container.poetry .poem .part.part2 div:last-child {
-            -moz-transform: scale(-1, -1);
-            -o-transform: scale(-1, -1);
-            -webkit-transform: scale(-1, -1);
-            transform: scale(-1, -1);
-            filter: FlipV;
-            -ms-filter: "FlipV"; }
         .container.poetry .poem .part li {
           opacity: 0;
           font-family: "Spectral";
@@ -225,8 +213,27 @@ html, body {
   .container.chapter1 .poem1 .part1 {
     display: flex;
     justify-content: space-between; }
-  .container.chapter1 .poem1 .part2 div {
-    display: flex; }
+    .container.chapter1 .poem1 .part1 .jsgif:last-child {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH"; }
+  .container.chapter1 .poem1 .part2 {
+    flex-direction: column;
+    justify-content: space-around; }
+    .container.chapter1 .poem1 .part2 > div {
+      display: flex;
+      width: 100%;
+      justify-content: center; }
+    .container.chapter1 .poem1 .part2 > div:last-child {
+      -moz-transform: scale(-1, -1);
+      -o-transform: scale(-1, -1);
+      -webkit-transform: scale(-1, -1);
+      transform: scale(-1, -1);
+      filter: FlipV;
+      -ms-filter: "FlipV"; }
   .container.chapter2 {
     background-color: #001e4f; }
     .container.chapter2 .chapter {
@@ -237,8 +244,13 @@ html, body {
     .container.chapter2 .part1 {
       display: flex;
       flex-direction: column; }
-      .container.chapter2 .part1 div {
+      .container.chapter2 .part1 > div {
         display: flex; }
+    .container.chapter2 .part2 {
+      flex-direction: column; }
+      .container.chapter2 .part2 .jsgif {
+        position: relative;
+        top: -200px; }
   .container.chapter3 {
     background-color: #26073d; }
     .container.chapter3 .chapter {
@@ -375,7 +387,8 @@ html, body {
   background-size: contain;
   opacity: 0.8;
   padding: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 99; }
 
 .sound.muted {
   background: url(../images/no-sound.png) no-repeat;
@@ -856,7 +869,8 @@ html, body {
     margin-bottom: 20px; }
 
 .hide-load {
-  opacity: 0; }
+  opacity: 0;
+  z-index: -999; }
 
 .chapter-container {
   overflow: hidden; }

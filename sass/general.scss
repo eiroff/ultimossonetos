@@ -207,18 +207,11 @@ html, body {
 
 				&.part1 {
 					margin-top: 100px;
-					img:last-child {
-						-moz-transform: scaleX(-1);
-				        -o-transform: scaleX(-1);
-				        -webkit-transform: scaleX(-1);
-				        transform: scaleX(-1);
-				        filter: FlipH;
-				        -ms-filter: "FlipH";
-					}
 				}
 
 				&.part3 {
-					img:first-child {
+					justify-content: space-between;
+					.jsgif:first-child {
 						-moz-transform: scaleX(-1);
 				        -o-transform: scaleX(-1);
 				        -webkit-transform: scaleX(-1);
@@ -228,17 +221,8 @@ html, body {
 					}
 				}
 
-
-				&.part2 {
+				&.part4 {
 					flex-direction: column;
-					div:last-child {
-						-moz-transform: scale(-1, -1);
-				        -o-transform: scale(-1, -1);
-				        -webkit-transform: scale(-1, -1);
-				        transform: scale(-1, -1);
-				        filter: FlipV;
-				        -ms-filter: "FlipV";
-					}
 				}
 
 				li {
@@ -273,10 +257,30 @@ html, body {
 			.part1 {
 				display: flex;
     			justify-content: space-between;
+				.jsgif:last-child {
+					-moz-transform: scaleX(-1);
+			        -o-transform: scaleX(-1);
+			        -webkit-transform: scaleX(-1);
+			        transform: scaleX(-1);
+			        filter: FlipH;
+			        -ms-filter: "FlipH";
+				}
 			}
 			.part2 {
-				div {
+				flex-direction: column;
+				justify-content: space-around;
+				> div {
 					display: flex;
+					width: 100%;
+					justify-content: center;
+				}
+				> div:last-child {
+					-moz-transform: scale(-1, -1);
+			        -o-transform: scale(-1, -1);
+			        -webkit-transform: scale(-1, -1);
+			        transform: scale(-1, -1);
+			        filter: FlipV;
+			        -ms-filter: "FlipV";
 				}
 			}
 		}
@@ -294,8 +298,15 @@ html, body {
 		.part1 {
 		    display: flex;
     		flex-direction: column;
-			div {
+			> div {
 				display: flex;
+			}
+		}
+		.part2 {
+			flex-direction: column;
+			.jsgif {
+				position: relative;
+    			top: -200px;
 			}
 		}
 	}
@@ -506,6 +517,7 @@ html, body {
 	opacity: 0.8;
 	padding: 0;
 	cursor: pointer;
+	z-index: 99;
 }
 
 .sound {
@@ -1118,6 +1130,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', end
 
 .hide-load {
 	opacity: 0;
+	z-index: -999;
 }
 
 .chapter-container {
