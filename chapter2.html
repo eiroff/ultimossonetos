@@ -8,9 +8,16 @@
   <link rel="stylesheet" href="css/general.css">
   <link href="https://fonts.googleapis.com/css?family=Spectral:300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/libgif.js"></script>
+  <script type="text/javascript" src="js/rubbable.js"></script>
 </head>
 
 <body>
+  <div class="loading overlay">
+    Loading
+  </div>
   <div class="container poetry chapter2">
     <iframe src="audio/satie-n3.mp3" allow="autoplay" id="iframe-satie-n3"></iframe>
 
@@ -33,7 +40,7 @@
           <li>Que o campo quieto em convulsões alaga...</li>
         </ul>
         <div>
-          <img src="images/poem2-part11.gif">
+          <img class="gif" rel:auto_play="0" data-name="gif10" src="images/poem2-part11.gif">
           <img src="images/poem2-part12.gif">
         </div>
       </div>
@@ -45,7 +52,7 @@
           <li>Bebem apenas o licor moderno</li>
           <li>Do tédio pessimista que as esmaga.</li>
         </ul>
-        <img src="images/poem2-part2.gif">
+        <img class="gif" rel:auto_play="0" data-name="gif11" src="images/poem2-part2.gif">
       </div>
 
       <div class="part part3">
@@ -54,7 +61,7 @@
           <li>Vem exótica e nua, vem dançando,</li>
           <li>No estrambotismo lúgubre vem vindo.</li>
         </ul>
-        <img src="images/poem2-part3.gif">
+        <img class="gif" rel:auto_play="0" data-name="gif12" src="images/poem2-part3.gif">
       </div>
 
       <div class="part part4">
@@ -112,9 +119,6 @@
       </ul>
     </nav>
   </div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>

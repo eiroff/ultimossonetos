@@ -23,7 +23,6 @@ $(function() {
   function verifyLoadedComplete() {
     if (totalGifsLoaded === totalGifs) {
       $('.loading').hide();
-
       for (var gif in gifs) {
         $(gifs[gif].get_canvas()).attr('data-name', gif);
       }

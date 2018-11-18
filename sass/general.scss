@@ -508,7 +508,7 @@ html, body {
 }
 
 .sound {
-	&.pause {
+	&.muted {
 		background: url(../images/no-sound.png) no-repeat;
 		background-size: contain;
 	}
@@ -857,11 +857,136 @@ html, body {
 //timeline
 
 .timeline-body {
-	
+	 .container {
+	  	background-image: url(../images/timeline.png);
+		background-repeat: no-repeat;
+	    animation: none;
+	    display: flex;
+	    height: 100vh;
+	    background-position: 300px 35px;
+	    background-size: 85%;
+	}
+
+	 .sound {
+	 	margin: 35px;
+	}
+
+	.bio-introduce {
+	 	margin: 0;
+	 	padding: 90px 50px;
+
+	 	.main-title.part-2 {
+	 		&:before {
+			    content: "";
+			    height: 20px;
+			    width: 130px;
+			    background: url(../images/bg-timeline-title.png) no-repeat;
+			    display: block;
+			    background-position: center;
+			    background-origin: content-box;
+			    position: absolute;
+			    left: 0;
+			    margin-top: 27px;
+	 		}
+	 	}
+	}
+
+	.main-timeline {
+		flex: 1;
+		padding-top: 150px;
+	}
+
+	@keyframes pulse {
+	  0% {
+	    transform: scale(1);
+	  }
+	  100% {
+	    transform: scale(1.2);
+	  }
+	}
+	@keyframes move {
+	  0% {
+	    transform: translate(3px, 3px);
+	  }
+	  100% {
+	    transform: translate(0, 0);
+	  }
+	}
+
+	.user {
+		background: #60D3CC;
+		opacity: 0.6;
+		border-radius: 50%;
+		margin: 20px 30px;
+		position: relative;
+		-webkit-box-shadow: 10px 10px 156px 13px rgba(255,255,255,1);
+		-moz-box-shadow: 10px 10px 156px 13px rgba(255,255,255,1);
+		box-shadow: 10px 10px 156px 13px rgba(255,255,255,1);
+		animation: pulse 1s ease infinite alternate;
+		animation: move 1s ease infinite alternate;
+	}
+
+	.user:nth-child(even) {
+		width: 17px;
+		height: 17px;
+	}
+
+	.user:nth-child(odd) {
+		width: 10px;
+		height: 10px;
+	}
+
+	.user1 {
+		left: 21%;
+	}
+	.user2 {
+		left: 11%;
+    	top: 14%;
+	}
+	.user3 {
+		left: 39%;
+		top: 1%;
+	}
+	.user4 {
+	    left: -6%;
+	    top: 27%;
+	}
+	.user5 {
+		left: 54%;
+		top: 12%;
+	}
+	.user6 {
+		left: 83%;
+	}
+	.user7 {
+		left: 14%;
+		top: 16%;
+	}
+	.user8 {
+		left: 44%;
+		top: 14%;
+	}
+	.user9 {
+		left: 26%;
+		top: 1%;
+	}
+	.user10 {
+		left: 11%;
+		top: 30%;
+	}
+	.user11 {
+		left: 76%;
+    	top: 18%;
+	}
+	.user12 {
+		left: 60%;
+		top: 20%;
+	}
+
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
   position: fixed;
   left: 0;
   top: 0;
