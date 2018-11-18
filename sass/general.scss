@@ -624,7 +624,7 @@ html, body {
     background-size: contain;
 }
 
-.tooltip .right, 
+.tooltip .right,
 .more-info.right {
     min-width:300px;
     top:50%;
@@ -1039,11 +1039,14 @@ html, body {
 }
 
 .overlay {
- background: #39086b; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #39086b 0%, #230544 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #39086b 0%,#230544 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #39086b 0%,#230544 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', endColorstr='#230544',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #39086b; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #39086b 0%, #230544 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #39086b 0%,#230544 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #39086b 0%,#230544 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', endColorstr='#230544',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  visibility: visible;
+  opacity: 1;
   position: fixed;
   left: 0;
   top: 0;
@@ -1051,9 +1054,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', end
   height: 100vh;
   z-index: 999;
   overflow: hidden;
-      -webkit-transition: opacity 1.5s ease-in-out;
-    -moz-transition: opacity 1.5s ease-in-out;
-    transition: opacity 1.5s ease-in-out;
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
   h1 {
   	text-transform: uppercase;
   	letter-spacing: 1.5px;
@@ -1079,7 +1082,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', end
   position: absolute;
   top: 0;
   left: 0;
-  
+
   -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
   animation: sk-bounce 2.0s infinite ease-in-out;
 }
@@ -1095,10 +1098,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', end
 }
 
 @keyframes sk-bounce {
-  0%, 100% { 
+  0%, 100% {
     transform: scale(0.0);
     -webkit-transform: scale(0.0);
-  } 50% { 
+  } 50% {
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
@@ -1130,7 +1133,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39086b', end
 
 .hide-load {
 	opacity: 0;
-	z-index: -999;
+  visibility: hidden;
 }
 
 .chapter-container {
