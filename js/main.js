@@ -99,7 +99,7 @@ $(function() {
       var partPoemPositionTop = $(this).position().top + parseInt($(this).css('marginTop'), 10),
           partPoemPositionBottom = partPoemPositionTop + $(this).height();
 
-      if (actualScroll > partPoemPositionTop) {
+      if (actualScroll > partPoemPositionTop - 300) {
         console.log(partPoemPositionTop);
         $(this).find('[data-name]').each(function() {
           var gifName = $(this).attr('data-name');
